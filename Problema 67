@@ -4,8 +4,7 @@
 //în memorie si afiseaza pe ecran sirul de caractere obtinut din sirul citit prin eliminarea tuturor
 //caracterelor care nu sunt litere.
 //Exemplu: daca se citeste sirul: Voi lua 10 la informatica atunci se va afisa:
-
-Voilualainformatica
+//Voilualainformatica
 
 #include<iostream>
 #include<string.h>
