@@ -1,4 +1,12 @@
 //Problema 67
+//Scrie?i un program C/C++ care cite?te de la tastatura un sir de cel mult 50 de caractere
+//(cifre, litere ale alfabetului englez si spatii; sirul contine cel putin o litert), apoi construieste
+//în memorie si afiseaza pe ecran sirul de caractere obtinut din sirul citit prin eliminarea tuturor
+//caracterelor care nu sunt litere.
+//Exemplu: daca se citeste sirul: Voi lua 10 la informatica atunci se va afisa:
+
+Voilualainformatica
+
 #include<iostream>
 #include<string.h>
 using namespace std;
