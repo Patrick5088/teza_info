@@ -12,13 +12,12 @@ using namespace std;
 
 int main()
 {char s[50];
-int i,j;
+int i;
 cout<<"Scrieti sirul = ";
 cin.getline(s,50);
 for(i=0;s[i];i++)
 {
-    j=i;
-    while(s[j]<65||s[i]>122||s[j]>90&&s[j]<97)
+    while(s[i]<65||s[i]>122||s[i]>90&&s[i]<97)
     {
         strcpy(s+i,s+i+1);
         s[strlen(s)]=0;
