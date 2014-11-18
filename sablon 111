@@ -1,0 +1,49 @@
+/*
+111. Un şir de caractere s se numeşte “şablon” pentru un alt şir de caractere x, dacă este
+format din caractere din mulţimea {*, ?,#}, are aceeaşi lungime cu x şi pe fiecare poziţie
+din s în care apare * în x se găseşte o vocală, pe fiecare poziţie din s în care apare #
+în x se găseşte o consoană şi pe fiecare poziţie din s în care apare ? putem avea
+orice caracter în x. Se consideră vocală orice literă din mulţimea {a,e,i,o,u}.
+Scrieţi programul C/C++ care citeşte de la tastatură două şiruri de caractere, de aceeaşi
+lungime, formate din cel mult 200 de litere mici ale alfabetului englez, şi afişează pe ecran,
+un şablon comun celor două şiruri citite, care conţine un număr minim de caractere ?.
+Exemplu: pentru şirurile diamant şi pierdut se afişează #**#??#
+
+*/
+#include<iostream>
+#include<fstream>
+#include<string.h>
+using namespace std;
+ifstream fin("text.in");
+int main()
+{
+    char s[200],x[200],*p,*pa,voc[]="aeiuo",sablon[200];
+    int i,n;
+    cin.getline(s,200);
+    cin.getline(x,200);
+    n=strlen(s);
+    for(i=0;i<strlen(s);i++)
+    {
+        p=strchr(voc,s[i]);
+        pa=strchr(voc,x[i]);
+        if(p!=NULL)
+            s[i]='*';
+        else
+            s[i]='#';
+        if(pa!=NULL)
+            x[i]='*';
+        else
+            x[i]='#';
+
+    }
+    for(i=0;i<n;i++)
+        if(s[i]==x[i])
+        sablon[i]=s[i];
+        else
+        sablon[i]='?';
+    for(i=0;i<n;i++)
+        cout<<sablon[i];
+
+
+    return 0;
+}
